@@ -1,0 +1,18 @@
+name: 'Amazon Chime Notify'
+description: 'Send a notificatin to an Amazon Chime channel'
+author: 'Thomas Moulard'
+branding:
+  icon: 'bell'
+  color: 'gray-dark'
+inputs:
+  webhook:
+    description: Amazon Chime Webhook (see https://docs.aws.amazon.com/chime/latest/dg/webhooks.html)
+    default: ""
+    required: true
+  message:
+    description: Message to be sent.
+    default: ""
+    required: true
+runs:
+  using: 'node12'
+  main: 'lib/action-amazon-chime.js'

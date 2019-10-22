@@ -1,0 +1,24 @@
+name: "Test action-amazon-chime"
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'releases/*'
+
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+
+    - run: npm ci
+    - run: npm run build
+
+    - uses: ./ # Uses an action in the root directory
+      with:
+        message: |
+          [${{ github.workflow }}][${{ github.event_name }}] :white_check_mark: Test message sent by the action-amazon-chime e2e test.
+          Link to GitHub Action run: https://github.com/${{ github.repository }}/commit/${{ github.sha }}/checks
+        # Webhook URL to the chat room called "Test Room".
+        webhook: ${{ secrets.testRoomWebHookUrl }}
