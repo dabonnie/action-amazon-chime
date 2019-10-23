@@ -1,6 +1,6 @@
 # action-amazon-chime
 
-[![GitHub Action Status](https://github.com/thomas-moulard/action-amazon-chime/workflows/Test%20action-amazon-chime/badge.svg)](https://github.com/thomas-moulard/action-amazon-chime)
+[![GitHub Action Status](https://github.com/thomas-moulard/action-amazon-chime/workflows/Test%20action-amazon-chime/badge.svg)](https://github.com/thomas-moulard/action-amazon-chime) [![Greenkeeper badge](https://badges.greenkeeper.io/thomas-moulard/action-amazon-chime.svg)](https://greenkeeper.io/)
 
 This action notifies an [Amazon Chime](https://aws.amazon.com/chime/) chatroom.
 
