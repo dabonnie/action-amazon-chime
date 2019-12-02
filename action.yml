@@ -15,4 +15,4 @@ inputs:
     required: true
 runs:
   using: 'node12'
-  main: 'lib/action-amazon-chime.js'
+  main: 'dist/index.js'
