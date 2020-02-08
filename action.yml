@@ -1,5 +1,5 @@
 name: 'Amazon Chime Notify'
-description: 'Send a notificatin to an Amazon Chime channel'
+description: 'Send a notification to an Amazon Chime channel'
 author: 'Thomas Moulard'
 branding:
   icon: 'bell'
