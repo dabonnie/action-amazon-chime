@@ -1,6 +1,8 @@
 # action-amazon-chime
 
 [![GitHub Action Status](https://github.com/thomas-moulard/action-amazon-chime/workflows/Test%20action-amazon-chime/badge.svg)](https://github.com/thomas-moulard/action-amazon-chime)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ros-tooling/action-amazon-chime)](https://dependabot.com)
+
 
 This action notifies an [Amazon Chime](https://aws.amazon.com/chime/) chatroom.
 
@@ -10,7 +12,7 @@ See [action.yml](action.yml)
 
 ```yaml
 steps:
-- uses: thomas-moulard/action-amazon-chime@master
+- uses: ros-tooling/action-amazon-chime@master
   with:
     message: |
       [${{ github.workflow }}][${{ github.event_name }}] :white_check_mark: Test message sent by the action-amazon-chime e2e test.
