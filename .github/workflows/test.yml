@@ -22,3 +22,13 @@ jobs:
           Link to GitHub Action run: https://github.com/${{ github.repository }}/commit/${{ github.sha }}/checks
         # Webhook URL to the chat room called "Test Room".
         webhook: ${{ secrets.testRoomWebHookUrl }}
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+      if: always()
+    - uses: ros-tooling/action-cloudwatch-metrics@0.0.4
+      if: always()
